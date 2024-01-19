@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WEb</title>
+        <link rel="stylesheet" href="{% static 'about.css' %}" />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="icon" href="{% static 'PICO-LOGO-SHORT.png' %}" type="image/gif">
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+         <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="News.html">News</a>
+        <a href="hireus.html">Hire US</a>
+        <a href="about.html">About</a>
+        <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+      </div>
+  
+      
+        <!-- -----------------------------------------------company---------------------------------------------------------------- -->
+        <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+         
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
+        }
+        
+        body {
+          min-height: 100vh;
+        }
+        
+        /* -----------------company----------------------- */
+        .company {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        
+        .company-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        
+        .img {
+          width: 100%;
+          margin: 1rem 0rem 0rem 2rem;
+        }
+        
+        .img img {
+          width: 100%;
+        }
+        
+        .company-info {
+          width: 100%;
+          margin-right: 4rem;
+        }
+        
+        .company-info span {
+          font-size: 2.5rem;
+          font-weight: bold;
+        }
+        
+        .company-info span .our {
+          color: #20b38e;
+        }
+        
+        .company-info p{
+          font-size: 1.1rem;
+        }
+        /* ----------------------------------------------- */
+        
+        .team {
+          display: flex;
+          justify-content: center;
+        }
+        
+        .team span {
+          font-size: 2.5rem;
+          font-weight: bold;
+          border-bottom: 4px solid #2ac47c;
+        }
+        
+        .container {
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        
+        
+        
+        .yellow-surname {
+          color: #ffdc0e;
+        }
+        
+         
+        .loading {
+          position: relative;
+          background: #e2e2e2;
+          overflow: hidden;
+        }
+        
+        .loading:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+          );
+          transform: translateX(-100%);
+          animation: loading 1.5s infinite;
+        }
+        
+        .info {
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+        
+        @keyframes loading {
+          100% {
+            transform: translateX(100%);
+          }
+        }
+        
+        /* ------------------------------footer---------------------------------------- */
+        footer {
+          background: #000;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+        }
+        
+        footer .content {
+          max-width: 1250px;
+          margin: auto;
+          padding: 30px 40px 40px 40px;
+        }
+        footer .content .top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 50px;
+        }
+        .content .top .logo-details {
+          color: #fdd166;
+          font-size: 30px;
+        }
+        .content .top .media-icons {
+          display: flex;
+        }
+        .content .top .media-icons a {
+          height: 40px;
+          width: 40px;
+          margin: 0 8px;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 40px;
+          color: #fff;
+          font-size: 17px;
+          text-decoration: none;
+          transition: all 0.4s ease;
+        }
+        .top .media-icons a:nth-child(1) {
+          background: #4267b2;
+        }
+        .top .media-icons a:nth-child(1):hover {
+          color: #4267b2;
+          background: #fff;
+        }
+        
+        .top .media-icons a:nth-child(2) {
+          background: #e1306c;
+        }
+        .top .media-icons a:nth-child(2):hover {
+          color: #e1306c;
+          background: #fff;
+        }
+        
+        footer .content .link-boxes {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+        footer .content .link-boxes .box {
+          width: calc(100% / 5 - 10px);
+        }
+        .content .link-boxes .box .link_name {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 400;
+          margin-bottom: 10px;
+          position: relative;
+        }
+        .link-boxes .box .link_name::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          height: 2px;
+          width: 35px;
+          background: #fdd166;
+        }
+        .content .link-boxes .box li {
+          margin: 6px 0;
+          list-style: none;
+        }
+        .content .link-boxes .box li a {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 400;
+          text-decoration: none;
+          opacity: 0.8;
+          transition: all 0.4s ease;
+        }
+        .content .link-boxes .box li a:hover {
+          opacity: 1;
+          text-decoration: underline;
+        }
+        .content .link-boxes .input-box {
+          margin-right: 55px;
+        }
+        .link-boxes .input-box input {
+          height: 40px;
+          width: calc(100% + 55px);
+          outline: none;
+          border: 2px solid #afafb6;
+          background: #140b5c;
+          border-radius: 4px;
+          padding: 0 15px;
+          font-size: 15px;
+          color: #fff;
+          margin-top: 5px;
+        }
+        .link-boxes .input-box input::placeholder {
+          color: #afafb6;
+          font-size: 16px;
+        }
+        .link-boxes .input-box input[type="button"] {
+          background: #fff;
+          color: #140b5c;
+          border: none;
+          font-size: 18px;
+          font-weight: 500;
+          margin: 4px 0;
+          opacity: 0.8;
+          cursor: pointer;
+          transition: all 0.4s ease;
+        }
+        .input-box input[type="button"]:hover {
+          opacity: 1;
+        }
+        footer .bottom-details {
+          width: 100%;
+          background: #000;
+          border-top: 0.5px solid #fff;
+        }
+        footer .bottom-details .bottom_text {
+          max-width: 1250px;
+          margin: auto;
+          padding: 20px 40px;
+          display: flex;
+          justify-content: space-between;
+        }
+        .bottom-details .bottom_text span,
+        .bottom-details .bottom_text a {
+          font-size: 14px;
+          font-weight: 300;
+          color: #fff;
+          opacity: 0.8;
+          text-decoration: none;
+        }
+        .bottom-details .bottom_text a:hover {
+          opacity: 1;
+          text-decoration: underline;
+        }
+        .bottom-details .bottom_text a {
+          margin-right: 10px;
+        }
+        
+        /* ------------------------------------------media-footer------------------------------------------- */
+        @media (max-width: 900px) {
+          .company-info {
+            width: 100%;
+            margin-right: 0rem;
+            margin-left: 1rem;
+          }
+          .company-info p{
+            margin-right: 2rem;
+            text-align: center;
+          }
+          .company-info span {
+            font-size: 1.7rem;
+            font-weight: bold;
+            text-align: center;
+          }
+          .team {
+            display: flex;
+            justify-content: center;
+          }
+        
+          .team span {
+            font-size: 1.7rem;
+            font-weight: bold;
+          }
+          .company {
+            display: flex;
+            flex-direction: column;
+          }
+          .img {
+            margin-left: 0rem;
+          }
+          footer .content .link-boxes {
+            flex-wrap: wrap;
+          }
+          footer .content .link-boxes .input-box {
+            width: 40%;
+            margin-top: 10px;
+          }
+        }
+        @media (max-width: 700px) {
+          footer {
+            position: relative;
+          }
+          .content .top .logo-details {
+            font-size: 26px;
+          }
+          .content .top .media-icons a {
+            height: 35px;
+            width: 35px;
+            font-size: 14px;
+            line-height: 35px;
+          }
+          footer .content .link-boxes .box {
+            width: calc(100% / 3 - 10px);
+          }
+          footer .content .link-boxes .input-box {
+            width: 60%;
+          }
+          .bottom-details .bottom_text span,
+          .bottom-details .bottom_text a {
+            font-size: 12px;
+          }
+        }
+        @media (max-width: 520px) {
+          footer::before {
+            top: 145px;
+          }
+          footer .content .top {
+            flex-direction: column;
+          }
+          .content .top .media-icons {
+            margin-top: 16px;
+          }
+          footer .content .link-boxes .box {
+            width: calc(100% / 2 - 10px);
+          }
+          footer .content .link-boxes .input-box {
+            width: 100%;
+          }
+        }
+        @media(max-width:320px){
+          .company-info p{
+            margin-right: 0rem;
+          }
+        } 
+        /* ---------------------------------------------------------------------------- */
+    </style>
+        <div class="company">
+          <div class="img">
+            <img src="https://raw.githubusercontent.com/pico-india/main-django/main/static/about-team.jpg" alt="" />
+          </div>
+          <div class="company-info">
+            <span>IMAGINATION<span class="our">     INNOVATION REALITY</span></span>
+            <p>
+              <b>Our Mission</b> At V-Softwares, our mission is to transform ideas into reality by leveraging the power of technology. We strive to be at the forefront of innovation, creating software solutions that not only meet current industry standards but also anticipate future trends. We are dedicated to helping businesses achieve their goals through the seamless integration of advanced technologies.
+            </p>
+          </div>
+        </div>
+       
+        <div class="team"><span><h1 class="w3-text-white">V-S</h1></span></div>
+        <div class="container">
+          
+             
+            <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Softwares and Websites</b></h1>
+            <h4 class="w3-text-white"> <b>Welcome to V-Softwares:</b> Where Innovation Meets Excellence
+
+              At V-Softwares, we embark on a journey defined by innovation, excellence, and a relentless pursuit of technological advancement. As a leading force in the realm of software development, we pride ourselves on crafting solutions that transcend conventional boundaries and redefine what's possible in the digital landscape.
+              
+              <br> Vision:
+              At the core of V-Softwares is a vision to shape the future of technology. We believe in harnessing the power of code to create transformative experiences that empower businesses and individuals alike. Our commitment is not just to meet expectations but to exceed them, setting new standards for innovation and quality in every project we undertake.
+              
+              <br>Unparalleled Expertise:
+              With a team of skilled developers, engineers, and designers, V-Softwares brings unparalleled expertise to the table. Our diverse skill set allows us to navigate various industries, delivering tailored solutions that address unique challenges and opportunities. From cutting-edge software development to groundbreaking applications of artificial intelligence, we stand at the forefront of technological evolution.
+              
+              <br>Innovation in Action:
+              From bespoke software solutions to off-the-shelf products, V-Softwares exemplifies innovation in action. Our portfolio spans across industries, showcasing a dynamic range of products and services that reflect our commitment to staying ahead of the curve. We understand that in a world of constant change, adaptability and innovation are the keys to success.
+              
+              <br>Join Us on the Journey:
+              As you explore the world of V-Softwares, you're not just witnessing technology; you're joining a community dedicated to shaping the digital future. Together, we push boundaries, challenge norms, and create solutions that inspire and transform. Welcome to V-Softwares, where ideas become reality, and innovation knows no bounds.</h4>
+             
+          </div>
+            
+
+
+
+            
+            </div>
+          </div>
+        </div>
+    
+         
+        <!-- ---------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------------- -->
+      
+      </html>
+      
